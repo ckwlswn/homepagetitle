@@ -1,0 +1,198 @@
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+ul { list-style-type: none;}
+a { text-decoration: none;}
+body {
+    font-family: 'Nanum Gothic', sans-serif; 
+}            
+
+#main_header {
+    width: 1200px;
+    height: 70px;
+    box-shadow: 1px 1px 4px #999;
+    position: relative;
+    margin: 0 auto;
+}
+#main_header > h1 {
+    position: absolute;
+    top: 16px; left: 30px;
+}
+#main_gnb {
+    position: absolute;
+    left: 480px; top: 30px;
+    text-align: center;
+    /* outline: 1px solid red; */
+}
+ /* 1단계 메뉴 */
+ #main_gnb > .depth1 > li {
+    float: left;
+    width: 100px;
+    /* outline: 1px solid red; */
+    
+}
+#main_gnb > .depth1 > li a {
+    font-size: 16px;
+    font-weight: bold;
+}
+  /* hover 시 2단계 표시 */
+  #main_gnb > .depth1 > li:hover > .depth2 {
+    display: block;
+    
+    height: 110px;
+    opacity: 1;
+
+}
+#main_gnb li a { 
+    display: block;
+    /* background-color: pink; */
+    color: #000;
+}
+ /* 2단계 메뉴 */
+ #main_gnb .depth2 {
+    border: 1px solid #666;
+    margin-top: 20px;
+    /* display: none; */
+    height: 0px;
+    background: #fff;
+    overflow: hidden;
+    transition: 0.4s;
+    opacity: 0;
+}
+#main_gnb .depth2 li a {
+    font-size: 14px;
+    line-height: 15px;
+    margin-top: 5px;
+
+ 
+}
+
+/* 메뉴 선택 효과 */
+#main_gnb  a:hover { text-decoration: underline;}
+#main_gnb .depth2 > li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#search {
+    float: right;
+    margin-right: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+#search input {
+    height: 30px;
+}
+#search img {
+    position: relative;
+    top: 8px; left: 35px;
+    width: 25px;
+}
+#visual {
+    width: 1200px;
+    margin: 0 auto;
+}
+#visual video {
+    width: 1200px;
+}
+#title {
+    width: 1200px;
+   position: relative;
+   margin: 0 auto;
+   left: 145px; bottom: 520px;
+ 
+   /* 애니메이션 효과 */
+   animation: title 2s linear  normal;
+  }
+  @keyframes title {
+      from {
+          opacity: 0;
+      }
+      50% {
+          opacity: 0.5;
+          
+      }
+      to {
+          opacity: 1;
+      }
+  }
+
+
+
+#title span:first-child {
+    font-family: 'Monoton', cursive;
+    font-size: 100px;
+    display: block;
+}
+#title span:nth-last-child(2) {
+    font-size: 42px;
+    font-weight: bolder;
+    /* outline: 1px solid red; */
+}
+
+#title > .btn {
+    width: 230px; height: 45px;
+    background: #000;
+    border-radius: 20px;
+    margin-top: 75px;
+    text-align: center;
+    margin-left: 10px;
+}
+#title > .btn:hover {
+    background: #fff;
+    
+}
+#title > .btn:hover a { color: #000;}
+#title > .btn a {
+    color: #fff;
+    line-height: 45px;
+    
+}
+
+#bottom {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    bottom: 390px; left: 20px;
+}
+#bottom > .gnb li {
+    display: inline-block;
+    width: 70px;
+    text-align: center;
+}
+#bottom > .gnb li a {
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+}
+#bottom > .gnb li a:hover {
+    text-decoration: underline;
+}
+#bottom > .icon {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    left: 970px;bottom: 20px;
+    
+}
+#bottom > .icon img {
+    width: 25px;
+    height: 25px;
+   }
+
+/* 아이콘 확대효과 */
+   #bottom > .icon li {
+       display: inline;
+       margin-right: 10px;
+       margin-left: 10px;
+      /* transition: 0.5s; */
+
+}
+#bottom > .icon li img {
+   transition: 0.1s;
+}
+#bottom > .icon li:hover img {
+    transform: scale(1.2);
+}
+   
